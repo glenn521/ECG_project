@@ -567,7 +567,7 @@ ymin=-3
 ymax=4
 axes.set_ylim([ymin,ymax])
 
-print(len(ECG1),len(a1))
+#print(len(ECG1),len(a1))
 plt.plot(a1,ECG1,color="blue")
 plt.plot(a2,ECG2,color="blue")
 plt.plot(a3,ECG3,color="blue")

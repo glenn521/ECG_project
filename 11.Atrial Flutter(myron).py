@@ -28,7 +28,7 @@ def f_wav(x,a_fwav,d_fwav,t_fwav,li):
             harm[i] = ((2*b*a)/(math.pi*math.pi*(j+1)*(j+1))*((1/math.pi*math.pi)*math.sin((j+1)*math.pi*x[i]/l)))
             f2[i]=f2[i]+harm[i]
         #print(type(p2))
-    #print(p2)
+    
     fwav=f2.copy()
     fwav=f2+f1-0.035-0.3
     return fwav
@@ -115,7 +115,16 @@ a=np.arange(0.01,6+0.01,0.01)
 #axs[5].plot(a,ecg)
 
 
-plt.plot(a,ecg)
+#plt.plot(a,ecg)
+
+axes = plt.gca()
+#axes.set_xlim([xmin,xmax])
+ymin=-3
+ymax=4
+axes.set_ylim([ymin,ymax])
+
+#print(len(ECG1),len(a1))
+plt.plot(a,ecg,color="blue")
 
 plt.title('Atrial Flutter')
 plt.xlabel('time (in seconds)')
