@@ -91,19 +91,9 @@ qrswav=qrs_wav(x2,a_qrswav,d_qrswav,t_qrswav,li2)
 
 #ecg output
 ecg=np.zeros(len(x))
-#for i in range(600):
-#    ecg.append(pwav[i]+qwav[i]+qrswav[i]+twav[i]+swav[i])
 for i in range(600):
     ecg[i]=fwav[i]+qrswav[i]
-#figure(1);
-#test=np.zeros(len(x))
-#for i in range(600):
-#    test[i]=pwav[i]+qwav[i]
-#subplot(3,1,1)
-#print(type(ecg))
-#print(len(x))
-#print(len(ecg))
-#print(a)
+
 
 #fig, axs = plt.subplots(6)
 a=np.arange(0.01,6+0.01,0.01)

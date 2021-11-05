@@ -150,8 +150,15 @@ ecg=np.zeros(len(x))
 for i in range(600):
     ecg[i]=pwav[i]+qwav[i]+twav[i]+swav[i]
 
+axes = plt.gca()
+#axes.set_xlim([xmin,xmax])
+ymin=-3
+ymax=4
+axes.set_ylim([ymin,ymax])
+
+
 a=np.arange(0.01,6+0.01,0.01)
-plt.plot(a,ecg)
+plt.plot(a,ecg,color='blue')
 
 plt.title('Ventricular Tachycardia')
 plt.xlabel('time (in seconds)')

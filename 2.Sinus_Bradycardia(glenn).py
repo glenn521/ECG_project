@@ -218,7 +218,7 @@ ymin=-3
 ymax=4
 axes.set_ylim([ymin,ymax])
 
-plt.plot(a,ecg)
+plt.plot(a,ecg,color='blue')
 
 plt.title('Sinus Bradycardia')
 plt.xlabel('time (in seconds)')

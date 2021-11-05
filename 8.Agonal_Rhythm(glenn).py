@@ -287,8 +287,8 @@ axes = plt.gca()
 #xmin=0
 #xmax=4
 #axes.set_xlim([xmin,xmax])
-ymin=-3
-ymax=4
+ymin=-1
+ymax=1
 axes.set_ylim([ymin,ymax])
 
 

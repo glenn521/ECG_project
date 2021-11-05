@@ -711,32 +711,32 @@ def main():
     aa1=0
     bb1=100
     cc1=1
-    for i in range(aa1,bb1,cc1):
+    for i in range(aa1,bb1,cc1):        #0 to 1   correct
         ecg1[i]=y[i]+twav5[i]+swav5[i]
 
     #ecg 2
     #ecg2=d+g
-    ecg2=np.zeros(600)
+    ecg2=np.zeros(600)                  #1 to 1.11 correct
     for i in range(aa2,bb2,cc2):
         ecg2[i]=d[i]+g[i]
     
     #ecg 3
     #ecg3=y2
-    ecg3=np.zeros(600)
-    for i in range(aa3,bb3,cc3):
-        ecg3[i]=y2[i]
+    ecg4=np.zeros(600)                  #3.9 to 4.5   naming ecg 4
+    for i in range(aa4,bb4,cc4):
+        ecg4[i]=y2[i]
 
     #ecg 4
     #ecg4=d2+g2+swav3+twav7
-    ecg4=np.zeros(600)
-    for i in range(aa4,bb4,cc4):
-        ecg4[i]=d2[i]+g2[i]+swav3[i]+twav7[i]
+    ecg5=np.zeros(600)                  #4.5 to 6     naming ecg 5
+    for i in range(aa5,bb5,cc5):
+        ecg5[i]=d2[i]+g2[i]+swav3[i]+twav7[i]
 
     #ecg 5
     #ecg5=d9+twav4+swav
-    ecg5=np.zeros(600)
-    for i in range(aa5,bb5,cc5):
-        ecg5[i]=d9[i]+twav4[i]+swav[i]
+    ecg3=np.zeros(600)                  #1.11 to 4    naming ecg 3
+    for i in range(aa3,bb3,cc3):
+        ecg3[i]=d9[i]+twav4[i]+swav[i]
 
     
     
@@ -761,13 +761,12 @@ def main():
     
     #XX1=np.arange(3.88,6+0.01,0.01)
     ECG2=np.zeros(13, dtype = float)    #100-111
-    for i in range(100,111,1):
+    for i in range(100,110,1):
     
         ECG2[i-100]=ecg2[i]
 
 
     
-    #XX1=np.arange(3.88,6+0.01,0.01)
     ECG3=np.zeros(280, dtype = float)   #111-390
     for i in range(111,390,1):
     
@@ -807,14 +806,20 @@ def main():
     plt.plot(a2,ECG2,color="blue")
     plt.plot(a3,ECG3,
     color="blue")
-    plt.plot(a4,ECG4,color="blue")
+    plt.plot(a4,ECG4,color="b;lue")
     plt.plot(a5,ECG5,color="blue")'''
+
+    axes = plt.gca()
+    #axes.set_xlim([xmin,xmax])
+    ymin=-2
+    ymax=3
+    axes.set_ylim([ymin,ymax])
     a=np.arange(0.01,6+0.01,0.01)
-    plt.plot(a,ecg1,color="blue")
-    plt.plot(a,ecg2,color="blue")
-    plt.plot(a,ecg3,color="blue")
-    plt.plot(a,ecg4,color="blue")
-    plt.plot(a,ecg5,color="blue")
+    plt.plot(a1,ECG1,color="blue")
+    plt.plot(a2,ECG2,color="blue")
+    plt.plot(a3,ECG3,color="blue")
+    plt.plot(a4,ECG4,color="blue")
+    plt.plot(a5,ECG5,color="blue")
     
 
     plt.title('Ventricular Fibrilation')
@@ -823,21 +828,7 @@ def main():
     plt.show()
 
     print()
-    '''print(aa1)
-    print(bb1)
-    print(cc1)
-    print(aa2)
-    print(bb2)
-    print(cc2)
-    print(aa3)
-    print(bb3)
-    print(cc3)
-    print(aa4)
-    print(bb4)
-    print(cc4)
-    print(aa5)
-    print(bb5)
-    print(cc5)'''
+   
    
 
 main()

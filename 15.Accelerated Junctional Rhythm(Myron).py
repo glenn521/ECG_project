@@ -181,8 +181,14 @@ a=np.arange(0.01,6+0.01,0.01)
 #axs[4].plot(a,twav)
 #axs[5].plot(a,ecg)
 
+axes = plt.gca()
+#axes.set_xlim([xmin,xmax])
+ymin=-3
+ymax=4
+axes.set_ylim([ymin,ymax])
 
-plt.plot(a,ecg)
+
+plt.plot(a,ecg,color='blue')
 
 plt.title('Accelerated Junctional Rhythm')
 plt.xlabel('time (in seconds)')

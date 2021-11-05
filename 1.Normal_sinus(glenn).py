@@ -208,7 +208,7 @@ axes = plt.gca()
 ymin=-3
 ymax=4
 axes.set_ylim([ymin,ymax])
-plt.plot(a,ecg,color="blue")
+plt.plot(a,ecg,color='blue')
 
 plt.title('Normal Sinus Rhythm')
 plt.xlabel('time (in seconds)')

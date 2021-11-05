@@ -169,15 +169,6 @@ ecg=np.zeros(len(x))
 #    ecg.append(pwav[i]+qrswav[i]+twav[i]+swav[i])
 for i in range(600):
     ecg[i]=pwav[i]+qrswav[i]+twav[i]+swav[i]
-#figure(1);
-#test=np.zeros(len(x))
-#for i in range(600):
-#    test[i]=pwav[i]
-#subplot(3,1,1)
-#print(type(ecg))
-#print(len(x))
-#print(len(ecg))
-#print(a)
 
 #fig, axs = plt.subplots(6)
 a=np.arange(0.01,6+0.01,0.01)
@@ -189,7 +180,14 @@ a=np.arange(0.01,6+0.01,0.01)
 #axs[5].plot(a,ecg)
 
 
-plt.plot(a,ecg)
+axes = plt.gca()
+#axes.set_xlim([xmin,xmax])
+ymin=-3
+ymax=4
+axes.set_ylim([ymin,ymax])
+
+
+plt.plot(a,ecg,color='blue')
 
 plt.title('Junctional Tachycardia')
 plt.xlabel('time (in seconds)')
