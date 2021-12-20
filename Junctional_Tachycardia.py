@@ -1,7 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-from pconst import const
+#from pconst import const
 
 #pwav
 def p_wav(x,a_pwav,d_pwav,t_pwav,li):
@@ -192,5 +192,7 @@ plt.plot(a,ecg,color='blue')
 plt.title('Junctional Tachycardia')
 plt.xlabel('time (in seconds)')
 plt.ylabel('Volts(mV)')
+manager = plt.get_current_fig_manager()
+manager.full_screen_toggle()
 plt.show()
 #plot(x,ecg)

@@ -825,6 +825,8 @@ def main():
     plt.title('Ventricular Fibrilation')
     plt.xlabel('time (in seconds)')
     plt.ylabel('Volts(mV)')
+    manager = plt.get_current_fig_manager()
+    manager.full_screen_toggle()
     plt.show()
 
     print()

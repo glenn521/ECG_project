@@ -1,7 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-from pconst import const 
+#from pconst import const 
 
 #qwav
 def q_wav(x,a_qwav,d_qwav,t_qwav,li):
@@ -193,4 +193,6 @@ plt.plot(a,ecg,color='blue')
 plt.title('Accelerated Junctional Rhythm')
 plt.xlabel('time (in seconds)')
 plt.ylabel('Volts(mV)')
+manager = plt.get_current_fig_manager()
+manager.full_screen_toggle()
 plt.show()
