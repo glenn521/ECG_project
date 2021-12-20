@@ -345,7 +345,7 @@ a=np.arange(0.01,6+0.01,0.01)
 
 plt.plot(a,ecg, color='blue')
 
-plt.title('Normal Sinus Rhythm')
+plt.title('Atrial Fibrilation')
 plt.xlabel('time (in seconds)')
 plt.ylabel('Volts(mV)')
 manager = plt.get_current_fig_manager()

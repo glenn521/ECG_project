@@ -210,7 +210,7 @@ ymax=4
 axes.set_ylim([ymin,ymax])
 plt.plot(a,ecg,color='blue')
 
-plt.title('Normal Sinus Rhythm')
+plt.title('Junctional Escape Rhythm')
 plt.xlabel('time (in seconds)')
 plt.ylabel('Volts(mV)')
 manager = plt.get_current_fig_manager()
