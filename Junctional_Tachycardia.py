@@ -1,7 +1,6 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-#from pconst import const
 
 #pwav
 def p_wav(x,a_pwav,d_pwav,t_pwav,li):

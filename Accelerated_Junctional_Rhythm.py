@@ -1,7 +1,6 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-#from pconst import const 
 
 #qwav
 def q_wav(x,a_qwav,d_qwav,t_qwav,li):

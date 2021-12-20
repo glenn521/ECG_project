@@ -1,7 +1,6 @@
 from subprocess import Popen
 import tkinter as tk
 from PIL import Image,ImageTk
-import PyPDF2
 root= tk.Tk()
 from tkinter.filedialog import askopenfile
 
