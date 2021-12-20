@@ -123,4 +123,5 @@ option20 = tk.StringVar()
 option20_btn = tk.Button(root, text="Exit", command=root.destroy, font=ft, bg='red', fg=fgcolor, height=ht, width=wd,borderwidth=3)
 option20_btn.grid(column=2,row=7)
 
+root.attributes('-fullscreen', True)
 root.mainloop()
