@@ -118,9 +118,8 @@ option19_btn = tk.Button(root, textvariable=option19,command=lambda:Popen('pytho
 option19.set("Junctional \nescape rhythm")
 option19_btn.grid(column=0,row=7)
 
-
-
-#canvas = tk.Canvas(root, width=600, height=250)
-#canvas.grid(columnspan=3, column =0, row=1)
+option20 = tk.StringVar()
+option20_btn = tk.Button(root, text="Exit", command=root.destroy, font=ft, bg='red', fg=fgcolor, height=ht, width=wd,borderwidth=3)
+option20_btn.grid(column=2,row=7)
 
 root.mainloop()
