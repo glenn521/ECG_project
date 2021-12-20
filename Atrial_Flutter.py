@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+plt.style.use('dark_background')
 
 #pwav
 def f_wav(x,a_fwav,d_fwav,t_fwav,li):
@@ -113,12 +114,12 @@ ymin=-3
 ymax=4
 axes.set_ylim([ymin,ymax])
 
-#print(len(ECG1),len(a1))
-plt.plot(a,ecg,color="blue")
+plt.plot(a,ecg,color="#04ed00")
+ax = plt.gca()
+ax.axes.xaxis.set_visible(False)
+ax.axes.yaxis.set_visible(False)
+ax.axis("off")
 
-plt.title('Atrial Flutter')
-plt.xlabel('time (in seconds)')
-plt.ylabel('Volts(mV)')
 manager = plt.get_current_fig_manager()
 manager.full_screen_toggle()
 plt.show()

@@ -3,6 +3,8 @@ from numpy import sum,isrealobj,sqrt
 from numpy.random import standard_normal
 from math import cos,sin,pi
 import matplotlib.pyplot as plt
+plt.style.use('dark_background')
+
 
 
 def awgn(s,SNRdB,L=1):
@@ -343,11 +345,12 @@ axes.set_ylim([ymin,ymax])
 
 a=np.arange(0.01,6+0.01,0.01)
 
-plt.plot(a,ecg, color='blue')
+plt.plot(a,ecg,color="#04ed00")
+ax = plt.gca()
+ax.axes.xaxis.set_visible(False)
+ax.axes.yaxis.set_visible(False)
+ax.axis("off")
 
-plt.title('Atrial Fibrilation')
-plt.xlabel('time (in seconds)')
-plt.ylabel('Volts(mV)')
 manager = plt.get_current_fig_manager()
 manager.full_screen_toggle()
 plt.show()

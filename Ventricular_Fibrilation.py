@@ -3,6 +3,7 @@ from numpy import sum,isrealobj,sqrt
 from numpy.random import standard_normal
 from math import cos,sin,pi
 import matplotlib.pyplot as plt
+plt.style.use('dark_background')
 
 
 def awgn(s,SNRdB,L=1):
@@ -802,12 +803,12 @@ def main():
     ymax=4
     axes.set_ylim([ymin,ymax])'''
 
-    '''plt.plot(a1,ECG1,color="blue")
-    plt.plot(a2,ECG2,color="blue")
+    '''plt.plot(a1,ECG1,color="#04ed00")
+    plt.plot(a2,ECG2,color="#04ed00")
     plt.plot(a3,ECG3,
-    color="blue")
+    color="#04ed00")
     plt.plot(a4,ECG4,color="b;lue")
-    plt.plot(a5,ECG5,color="blue")'''
+    plt.plot(a5,ECG5,color="#04ed00")'''
 
     axes = plt.gca()
     #axes.set_xlim([xmin,xmax])
@@ -815,16 +816,17 @@ def main():
     ymax=3
     axes.set_ylim([ymin,ymax])
     a=np.arange(0.01,6+0.01,0.01)
-    plt.plot(a1,ECG1,color="blue")
-    plt.plot(a2,ECG2,color="blue")
-    plt.plot(a3,ECG3,color="blue")
-    plt.plot(a4,ECG4,color="blue")
-    plt.plot(a5,ECG5,color="blue")
+    plt.plot(a1,ECG1,color="#04ed00")
+    plt.plot(a2,ECG2,color="#04ed00")
+    plt.plot(a3,ECG3,color="#04ed00")
+    plt.plot(a4,ECG4,color="#04ed00")
+    plt.plot(a5,ECG5,color="#04ed00")
     
+    ax = plt.gca()
+    ax.axes.xaxis.set_visible(False)
+    ax.axes.yaxis.set_visible(False)
+    ax.axis("off")
 
-    plt.title('Ventricular Fibrilation')
-    plt.xlabel('time (in seconds)')
-    plt.ylabel('Volts(mV)')
     manager = plt.get_current_fig_manager()
     manager.full_screen_toggle()
     plt.show()

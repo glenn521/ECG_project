@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+plt.style.use('dark_background')
 
 #qwav
 def q_wav(x,a_qwav,d_qwav,t_qwav,li):
@@ -186,12 +187,12 @@ ymin=-3
 ymax=4
 axes.set_ylim([ymin,ymax])
 
+plt.plot(a,ecg,color="#04ed00")
+ax = plt.gca()
+ax.axes.xaxis.set_visible(False)
+ax.axes.yaxis.set_visible(False)
+ax.axis("off")
 
-plt.plot(a,ecg,color='blue')
-
-plt.title('Accelerated Junctional Rhythm')
-plt.xlabel('time (in seconds)')
-plt.ylabel('Volts(mV)')
 manager = plt.get_current_fig_manager()
 manager.full_screen_toggle()
 plt.show()

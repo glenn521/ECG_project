@@ -2,6 +2,8 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import random
+plt.style.use('dark_background')
+
 
 ###################################################################################################################################################
 #p,q,qrs,r,s functions for 0 to 197  (198-1)
@@ -497,13 +499,15 @@ ymax=4
 axes.set_ylim([ymin,ymax])
 
 
-plt.plot(a,ECG,color="blue")
-plt.plot(T,y,color="blue")
-plt.plot(XX1,ECG1,color="blue")
+plt.plot(a,ECG,color="#04ed00")
+plt.plot(T,y,color="#04ed00")
+plt.plot(XX1,ECG1,color="#04ed00")
 
-plt.title('Sinus Pause')
-plt.xlabel('time (in seconds)')
-plt.ylabel('Volts(mV)')
+ax = plt.gca()
+ax.axes.xaxis.set_visible(False)
+ax.axes.yaxis.set_visible(False)
+ax.axis("off")
+
 manager = plt.get_current_fig_manager()
 manager.full_screen_toggle()
 plt.show()

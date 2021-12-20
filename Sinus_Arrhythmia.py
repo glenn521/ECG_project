@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+plt.style.use('dark_background')
 
 #pwav
 def p_wav(x,a_pwav,d_pwav,t_pwav,li,aa,bb,cc):
@@ -573,15 +574,17 @@ ymin=-3
 ymax=4
 axes.set_ylim([ymin,ymax])
 
-plt.plot(a1,ECG1,color="blue")
-plt.plot(a2,ECG2,color="blue")
-plt.plot(a3,ECG3,color="blue")
-plt.plot(a4,ECG4,color="blue")
-plt.plot(a5,ECG5,color="blue")
+plt.plot(a1,ECG1,color="#04ed00")
+plt.plot(a2,ECG2,color="#04ed00")
+plt.plot(a3,ECG3,color="#04ed00")
+plt.plot(a4,ECG4,color="#04ed00")
+plt.plot(a5,ECG5,color="#04ed00")
 
-plt.title('Premature Junctional Complexes')
-plt.xlabel('time (in seconds)')
-plt.ylabel('Volts(mV)')
+ax = plt.gca()
+ax.axes.xaxis.set_visible(False)
+ax.axes.yaxis.set_visible(False)
+ax.axis("off")
+
 manager = plt.get_current_fig_manager()
 manager.full_screen_toggle()
 plt.show()
