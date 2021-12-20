@@ -4,7 +4,7 @@ from PIL import Image,ImageTk
 root= tk.Tk()
 from tkinter.filedialog import askopenfile
 
-canvas = tk.Canvas(root,width=600,height=100)
+canvas = tk.Canvas(root,width=600,height=100,background='#ccd7eb',bd=0, highlightthickness=0, relief='ridge')
 canvas.grid  (columnspan=3)
 
 #logo
@@ -14,12 +14,13 @@ logo_label=tk.Label(image=logo) #making a lable out of the image
 logo_label.image = logo
 logo_label.grid(column=1,row=0)
 '''
-instructions = tk.Label(root, text = "Select the required ECG signal to be displayed", font="Raleway")
+instructions = tk.Label(root, text = "Select the required ECG signal to be displayed", font="Arial", fg='#000', background='#ccd7eb')
 instructions.grid(columnspan=3, column=0, row=0)
+root.configure(background='#ccd7eb')
 
-ht=2
-wd=15
-ft="Raleway"
+ht=4
+wd=43
+ft="Arial"
 bgcolor="#0059b3"
 fgcolor="white"
 option1 = tk.StringVar()
@@ -116,7 +117,7 @@ option18_btn.grid(column=2,row=6)
 option19 = tk.StringVar()
 option19_btn = tk.Button(root, textvariable=option19,command=lambda:Popen('python Junctional_Escape_Rhythm.py',shell=True), font=ft, bg=bgcolor, fg=fgcolor, height=ht, width=wd,borderwidth=3)
 option19.set("Junctional \nescape rhythm")
-option19_btn.grid(column=0,row=7)
+option19_btn.grid(column=1,row=7)
 
 option20 = tk.StringVar()
 option20_btn = tk.Button(root, text="Exit", command=root.destroy, font=ft, bg='red', fg=fgcolor, height=ht, width=wd,borderwidth=3)
